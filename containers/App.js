@@ -31,10 +31,10 @@ class App extends Component {
     const {synced, books=[]} = this.state;
 
     if(!synced) {
-      return <div className="mdl-spinner mdl-js-spinner is-active"></div>;
+      return <div key="spinner" className="mdl-spinner mdl-js-spinner is-active"></div>;
     }
 
-    return <div className="mdl-chrome">
+    return <div key="chrome" className="mdl-chrome">
                <aside className="mdl-aside">
                  <BookInput categories={categories} actions={actions} onSearch={this.handleSearch.bind(this)}/>
                  <BookShelf categories={categories} books={books} path={path} actions={actions}/>
