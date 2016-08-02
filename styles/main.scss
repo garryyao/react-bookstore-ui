@@ -1,0 +1,247 @@
+$card-font-size: 12px !default;
+$card-title-font-size: 16px !default;
+$card-subtitle-font-size: 10px !default;
+$list-item-font-size: 12px !default;
+
+$input-text-font-size: 16px !default;
+$input-text-width: 100% !default;
+$input-text-padding: 5px !default;
+$input-text-vertical-spacing: 5px !default;
+
+$input-text-button-size: 20px !default;
+$input-text-floating-label-fontsize: 18px !default;
+$input-text-expandable-icon-top: 16px !default;
+
+@import "material-icons";
+@import "~material-design-lite/src/material-design-lite";
+
+body {
+	overflow: hidden;
+}
+
+.mdl-spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	top: calc(50% - 14px);
+	left: calc(50% - 14px);
+}
+
+.mdl-form-toolbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.mdl-textfield-search {
+	display: flex;
+	align-items: center;
+
+	.mdl-button-icon {
+		width: 30px;
+	}
+
+	.mdl-textfield__inline-holder {
+		position: relative;
+		top: -4px;
+	}
+
+	.mdl-textfield__input {
+		line-height: 20px;
+	}
+
+	.mdl-textfield__label {
+		top: 6px;
+		&::after {
+			bottom: 0;
+		}
+	}
+}
+
+.md-button-icon--top-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.mdl-chrome {
+	display: flex;
+	align-items: stretch;
+	height: 100vh;
+}
+
+.mdl-aside {
+	margin: 20px;
+	max-width: 320px;
+	display: flex;
+	flex-flow: column;
+}
+
+.mdl-tree-pane {
+	border: 1px solid $layout-drawer-border-color;
+	padding: 10px;
+	box-sizing: border-box;
+	height: calc(100vh - 52px);
+	overflow-y: auto;
+}
+
+.mdl-main {
+	margin: 20px;
+	margin-left: 0;
+	width: 100%;
+	border: 1px solid $layout-drawer-border-color;
+}
+
+.mdl-breadcrumb {
+	padding: 0 10px;
+	list-style: none;
+	display: flex;
+}
+
+.mdl-breadcrumb-item {
+
+	& + &:before {
+		display: inline-block;
+		padding-right: 7px;
+		padding-left: 7px;
+		color: $text-link-color;
+		content: "/";
+	}
+}
+
+/* the tree node's style */
+.tree-view {
+	overflow-y: hidden;
+	width: 100%;
+}
+
+.tree-view_item {
+	display: flex;
+}
+
+/* style for the children nodes container */
+.tree-view_children {
+	margin-left: 16px;
+}
+
+.tree-view_children-collapsed {
+	height: 0px;
+}
+
+.tree-view_arrow {
+	cursor: pointer;
+	margin-right: 6px;
+	display: inline-block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.tree-view_arrow:after {
+	content: '▾';
+}
+
+/* rotate the triangle to close it */
+.tree-view_arrow-collapsed {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+.mdl-tree-node {
+	display: flex;
+	align-items: center;
+	padding: 5px 0;
+
+	&--over {
+		color: $tooltip-text-color;
+		background-color: $tooltip-background-color;
+	}
+
+	&--dragging {
+		outline: 2px dotted $tooltip-background-color;
+	}
+
+	&--active {
+		background-color: $button-primary-color-disabled;
+	}
+}
+
+.mdl-tree-node-toolbar {
+	display: flex;
+	margin-left: auto;
+
+	.mdl-button--icon {
+		min-width: 24px;
+		width: 24px;
+		height: 24px;
+
+		& + .mdl-button--icon {
+			margin-left: 5px;
+		}
+	}
+
+	.material-icons {
+		font-size: 18px;
+	}
+}
+
+.mdl-tree-node-input {
+	font-size: 14px;
+}
+
+.mdl-tree-node-label {
+	width: 100%;
+	line-height: 24px;
+	cursor: pointer;
+}
+
+.mdl-search-result {
+	color: $tab-text-color;
+	& .mdl-tree-node-label {
+		cursor: default;
+	}
+}
+
+.mdl-dialog--addbook {
+	width: 400px;
+
+	.mdl-dialog__content {
+		min-height: 300px;
+		padding-top: 2em;
+
+		.mdl-textfield {
+			width: 100%;
+		}
+	}
+}
+
+.mdl-menu__container {
+	width: 100%;
+
+	.mdl-menu__outline {
+		width: 100%;
+	}
+
+	.mdl-menu {
+		position: static;
+	}
+
+	.mdl-menu__item {
+		padding: 0 10px;
+		height: 30px;
+		line-height: 30px;
+	}
+
+	&--inline {
+		position: static;
+		z-index: 0;
+		.mdl-menu__item {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 5px;
+		}
+	}
+}
+

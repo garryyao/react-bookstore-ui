@@ -1,0 +1,11 @@
+export const DELETE_CATEGORY = 'DELETE_CATEGORY'
+export const EDIT_CATEGORY = 'EDIT_CATEGORY'
+export const MOVE_CATEGORY = 'MOVE_ADDR'
+export const TOGGLE_CATEGORY = 'TOGGLE_CATEGORY'
+
+export const ADD_BOOK = 'ADD_BOOK'
+export const MOVE_BOOK = 'MOVE_BOOK'
+export const OPEN_BOOK = 'OPEN_BOOK'
+export const RECEIVE_BOOKS = 'RECEIVE_BOOKS'
+export const EDIT_BOOK = 'EDIT_BOOK'
+export const DELETE_BOOK = 'DELETE_BOOK'
