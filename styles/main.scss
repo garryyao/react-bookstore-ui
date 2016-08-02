@@ -1,6 +1,3 @@
-$card-font-size: 12px !default;
-$card-title-font-size: 16px !default;
-$card-subtitle-font-size: 10px !default;
 $list-item-font-size: 12px !default;
 
 $input-text-font-size: 16px !default;
@@ -13,7 +10,21 @@ $input-text-floating-label-fontsize: 18px !default;
 $input-text-expandable-icon-top: 16px !default;
 
 @import "material-icons";
-@import "~material-design-lite/src/material-design-lite";
+@import "~material-design-lite/src/variables";
+@import "~material-design-lite/src/mixins";
+
+// Resets and dependencies
+@import "~material-design-lite/src/resets/resets";
+@import "~material-design-lite/src/typography/typography";
+
+// Components
+@import "~material-design-lite/src/ripple/ripple";
+@import "~material-design-lite/src/animation/animation";
+@import "~material-design-lite/src/button/button";
+@import "~material-design-lite/src/dialog/dialog";
+@import "~material-design-lite/src/menu/menu";
+@import "~material-design-lite/src/spinner/spinner";
+@import "~material-design-lite/src/textfield/textfield";
 
 body {
 	overflow: hidden;
